@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular salário</title>
+</head>
+<body>
+    <h2>Calculando salário</h2>
+
+    Inserir valor do salário bruto:<br><br>
+    Salário Bruto: <input id="in_bruto"> <br><br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+     function calcular(){
+        var total = Number(in_bruto.value) - ((Number(in_bruto.value)* 0.1) + (Number(in_bruto.value) * 0.2) + (Number(in_bruto.value) * 0.03))
+        alert(div_resultado.HTML = `Apesar de seu bruto ser ${in_bruto.value}, após os descontos, você receberá somente R$ ${total.toFixed(2)}`)
+    }
+</script>

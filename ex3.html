@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos</title>
+</head>
+<body>
+    <h2>Calculadora</h2>
+    Inserir os números <br><br>
+    Primeiro Número: <input id="in_numero1"> <br><br>
+    Segundo Número:  <input id="in_numero2"> <br><br>
+
+    <button onclick="Somar()">Somar</button>
+    <button onclick="Subtrair()">Subtrair</button>
+    <button onclick="Multiplicar()">Multiplicar</button>
+    <button onclick="Dividir()">Dividir</button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function Somar(){
+        var soma = (Number(in_numero1.value) + Number(in_numero2.value))
+        div_resultado.innerHTML = ` A soma entre ${Number(in_numero1.value)} e ${Number(in_numero2.value)} é ${soma.toFixed(2)}`
+    }
+
+    function Subtrair(){
+        var subtracao = (Number(in_numero1.value) - Number(in_numero2.value))
+        div_resultado.innerHTML = `A diferença entre ${Number(in_numero1.value)} e ${Number(in_numero2.value)} é ${subtracao.toFixed(2)}`
+    }
+
+    function Multiplicar(){
+        var multiplicacao = (Number(in_numero1.value) * Number(in_numero2.value))
+        div_resultado.innerHTML = `O produto entre ${Number(in_numero1.value)} e ${Number(in_numero2.value)} é ${multiplicacao.toFixed(2)}`
+    }
+
+    function Dividir(){
+        var divisao = (Number(in_numero1.value) / Number(in_numero2.value))
+        div_resultado.innerHTML = `A razão entre ${Number(in_numero1.value)} e ${Number(in_numero2.value)} é ${divisao.toFixed(2)}`
+    }
+</script>

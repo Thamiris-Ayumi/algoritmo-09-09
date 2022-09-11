@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos alunos</title>
+</head>
+<body>
+    <h2>Calculando média</h2>
+    Primeira nota: <input id="in_nota1"> <br><br>
+    Segunda nota: <input id="in_nota2"> <br><br>
+
+    <button onclick="calculo()">Ver media</button>
+
+    <div id="div_resultado"></div>
+
+    <script>
+        function calculo() {
+            var media = (Number(in_nota1.value) + Number(in_nota2.value)) / 2
+        div_resultado.innerHTML = `Sua média foi de  ${media.toFixed(2)}, onde ${media.toFixed(2)} é a média aritmética entre ${in_nota1.value} e ${in_nota2.value}.`
+        }
+    </script>
+</body>
+</html>
